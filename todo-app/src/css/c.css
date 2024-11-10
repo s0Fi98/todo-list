@@ -1,0 +1,108 @@
+.create-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create-card {
+  margin-top: 50px;
+  width: 40vw;
+  max-width: 500px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.create-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.back-button svg {
+  color: #ffad00;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.back-button svg:hover {
+  color: #f06;
+  transform: scale(1.1);
+}
+
+.header-title {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: underline;
+}
+
+.create-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 17px;
+  width: 100%;
+}
+
+.create-input label {
+  color: #555;
+}
+
+.create-input textarea, input {
+  padding: 12px;
+  font-size: 13px;
+  font-family: monospace;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.3s;
+}
+
+.create-input input:focus, textarea:focus {
+  border-color: #333;
+  box-shadow: 0 0 4px rgba(51, 51, 51, 0.2);
+}
+
+.create-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.create-btn button {
+  width: 100%;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background: #ffad00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.create-btn button:hover {
+  background: #f06;
+  transform: scale(1.05);
+}

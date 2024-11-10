@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: monospace;
+    background: linear-gradient(to right, rgb(101, 3, 42), #f5ca6f);
+  }
+  

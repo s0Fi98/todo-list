@@ -1,0 +1,107 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  margin-top: 150px;
+}
+
+.login-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  width: 40vw;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(102, 0, 255, 0.1);
+}
+
+.login-card h1 {
+  text-decoration: underline;
+  font-size: 24px;
+  font-weight: 400;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #666;
+}
+
+.input-group input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.input-group input:focus {
+  border: 1px solid #333;
+}
+
+.password-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 40px; /* Add padding to avoid overlap with button */
+}
+
+.password-field button {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.password-field button img {
+  width: 20px;
+  height: 20px;
+}
+
+.login-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background: #ffad00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.login-button:hover {
+  background: #f06;
+  transform: scale(1.05);
+}
+
+.forgot-password-link h5 {
+  font-size: 14px;
+  color: #ffad00;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.forgot-password-link:hover h5 {
+  color: #f06;
+}
