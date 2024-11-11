@@ -1,15 +1,18 @@
-.card-container {
+.main-container {
     display: flex;
     justify-content: center;
     width: 100vw;
     gap: 20px;
   }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
   
   .main-card {
-    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 20px;
     background-color: #fff;
     border-radius: 12px;
@@ -71,7 +74,7 @@
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.5s;
     margin-top: 15px;
   }
   
