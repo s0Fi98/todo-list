@@ -9,12 +9,12 @@ const B = () => {
     <div className='home-container'>
       <Nav />
       <div className='home-card'>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
       </div>
     </div>
   )

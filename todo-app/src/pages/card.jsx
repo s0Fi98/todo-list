@@ -12,7 +12,6 @@ const Card = () => {
   ]);
   return (
     <div className="main-container">
-      <div className="card-container">
         {getTodos.map((val) => (
           <div className="main-card" key={val.id}>
             <div className="card-head">
@@ -44,7 +43,6 @@ const Card = () => {
           </div>
         ))}
       </div>
-    </div>
   );
 };
 
