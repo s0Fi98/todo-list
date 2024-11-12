@@ -1,21 +1,22 @@
 import LoginDetails from "../models/login.js";
 
-const test =  (req, res) => {
+const test = (req, res) => {
   res.send({
     tittle: 'Pe town Man',
     desc: 'Yo Simde Mc Stan'
-})
+  })
 }
 
-const loginCredentials = async (req, res) => {
-  const {userId, password} = req.body;
+const userCredentials = async (req, res) => {
   try {
-    const userData = new LoginDetails({ userId, password });
-    await userData.save();
-    res.status(201).json(userData)
+    const { userId, password } = req.body;
+    const value = new LoginDetails({ userId, password });
+    const newValue = await value.save();
+    console.log('credentials: ', newValue);
+    res.status(201).send({ message: "User data saved successfully.." })
   } catch (error) {
-    res.status(500).json({message: "Error saving user", error})
+    res.status(500).send({ message: "Error in saving data" });
   }
 }
 
-export default {test, loginCredentials}
+export default { test, userCredentials }

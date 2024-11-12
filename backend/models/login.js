@@ -5,5 +5,5 @@ const userSchema = new mongoose.Schema({
     password: {type: 'string', required: true}
 });
 
-const mongoScema = mongoose.model("todoDataBase", userSchema)
+const mongoScema = mongoose.model("logindatas", userSchema, "logindatas" )
 export default mongoScema;

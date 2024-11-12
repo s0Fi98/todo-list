@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import A from './pages/login';
 import B from './pages/home';
 import C from './pages/create';
+import Create from './pages/signup'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<A/>}/>
           <Route path="/home-page" element={<B/>}/>
           <Route path="/create-todos" element={<C/>}/>
+          <Route path="/create-Login-credentials" element={<Create/>}/>
         </Routes>
       </BrowserRouter>
     </>

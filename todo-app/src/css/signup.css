@@ -1,4 +1,4 @@
-.login-container {
+.signup-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,7 +6,7 @@
   margin-top: 150px;
 }
 
-.login-card {
+.signup-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +19,7 @@
   box-shadow: 0px 4px 20px rgba(102, 0, 255, 0.1);
 }
 
-.login-card h1 {
+.signup-card h1 {
   text-decoration: underline;
   font-size: 24px;
   font-weight: 400;
@@ -93,44 +93,4 @@
 .login-button:hover {
   background: #f06;
   transform: scale(1.05);
-}
-
-.forgot-password-link {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
-.forgot-password-link h5 {
-  font-size: 14px;
-  color: #ffad00;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.forgot-password-link:hover h5 {
-  color: #f06;
-}
-
-.login-footer {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.login-footer > span {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.login-footer > span :last-child h5 {
-  font-size: 14px;
-  color: #ffad00;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.login-footer > span :last-child h5:hover {
-  color:#f06;
 }

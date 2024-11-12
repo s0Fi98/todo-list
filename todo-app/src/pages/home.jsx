@@ -15,6 +15,8 @@ const B = () => {
       <Card />
       <Card />
       <Card />
+      <Card />
+      <Card />
       </div>
     </div>
   )
