@@ -1,4 +1,4 @@
-import LoginDetails from "../models/login.js";
+import LoginDetails from "../models/model.js";
 
 const test = (req, res) => {
   res.send({
@@ -19,4 +19,18 @@ const userCredentials = async (req, res) => {
   }
 }
 
-export default { test, userCredentials }
+const matchUsers = async (req, res) => {
+  try {
+    const {userId, password} = req.body;
+    const user = await LoginDetails.findOne({userId, password});
+    if (user) {
+      res.status(201).send({message: "Login Successful!"})
+    } else {
+      res.status(500).send({message: "User doesnot exist"})
+    }
+  } catch (error) {
+    res.status(500).send({ message: "Invalid user or password" })
+  }
+}
+
+export default { test, userCredentials, matchUsers }

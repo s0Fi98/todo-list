@@ -44,14 +44,14 @@ const A = () => {
 
   const login = (event) => {
     event.preventDefault();
-    // Axios.post("http://localhost:3500/send-credentials", inputData)
-    // .then((response) => {
-    //   console.log(response.data)
-    //   navigate('/home-page')
-    // })
-    // .catch((error) => {
-    //   console.log("error message: ", error);
-    // })
+    Axios.post("http://localhost:3500/match-users", inputData)
+    .then((response) => {
+      console.log(response.data)
+      navigate('/home-page')
+    })
+    .catch((error) => {
+      console.log("error message: ", error);
+    })
   }
 
   return (
