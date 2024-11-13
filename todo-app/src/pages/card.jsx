@@ -1,16 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Axios from "axios";
 
 import "../css/cards.css";
 
 const Card = () => {
-  const [getTodos, setGetTodos] = useState([
-    {
-      id : 1,
-      tittle: "Run Like a Dog",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus molestiae asperiores at placeat non nisi, eligendi dicta velit aperiam laboriosam!",
-    },
-  ]);
+
+  const [todoData, setTodoData] = useState([{
+    id: "", todoTittle: "", todoTextarea: ""
+  }]);
+
+ useEffect(() => {
+   alert("Hiii")
+   Axios.get("http://localhost:3500/get-Todos")
+   .then((result) => {
+    console.log();
+    setTodoData(result.data)
+   }).catch((err) => {
+    
+   });
+ }, [])
+ 
+
 
   const deleteCard = () => {
     alert('Card Removed!')
@@ -20,15 +30,12 @@ const Card = () => {
   const handleCheck = (e) => {
     setChecked(!checked)
     alert('Goal Completed')
-    // if (e.target.checked) {
-    //   alert("Goal Completed")
-    // } 
 
   }
 
   return (
     <div className="main-container">
-        {getTodos.map((val) => (
+        {todoData.map((val) => (
           <div className="main-card" key={val.id}>
             <div className="card-head">
               <span>
@@ -49,10 +56,10 @@ const Card = () => {
               </span>
             </div>
             <div className="card-tittle">
-              <h1>{val.tittle}</h1>
+              <h1>{val.todoTittle}</h1>
             </div>
             <div className="card-para">
-              <p>{val.description}</p>
+              <p>{val.todoTextarea}</p>
             </div>
             <div className="card-btn">
               <button>Read More..</button>

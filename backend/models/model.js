@@ -1,16 +1,19 @@
 import mongoose, { Mongoose } from "mongoose";
 
 const userSchema = new mongoose.Schema({
+    fname: {type: 'string', required: true},
+    email: {type: 'string', required: true},
+    contact: {type: 'number', required: true},
     userId: {type: 'string', required: true},
     password: {type: 'string', required: true}
 });
 
-const loginSchema = new mongoose.Schema({
-    userId: {type: 'string', required: true},
-    password: {type: 'string', required: true}
-}, {collection: "checkusers"})
+const todoSchema = new mongoose.Schema({
+    todoTittle: {type: "string", required: true},
+    todoTextarea: {type: "string", required: true}
+}, {collection: "todos"});
 
 const mongoScema = mongoose.model("logindatas", userSchema, "logindatas" );
-const login = mongoose.model("checkUser", loginSchema);
+const newTodo = mongoose.model("toDo", todoSchema);
 
-export default {mongoScema, login}
+export default {mongoScema, newTodo}

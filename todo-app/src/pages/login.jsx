@@ -9,7 +9,7 @@ import CloseEye from "../assets/closedeye.svg";
 import "../css/a.css";
 
 const A = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [eye, setEye] = useState(false);
 
@@ -47,7 +47,13 @@ const A = () => {
     Axios.post("http://localhost:3500/match-users", inputData)
     .then((response) => {
       console.log(response.data)
-      navigate('/home-page')
+      if(response.data.isAuthenticated){
+        sessionStorage.setItem('userId', response.data.data.userId);
+        navigate('/home-page');
+      }else{
+        alert(response.data.message);
+      }
+      
     })
     .catch((error) => {
       console.log("error message: ", error);

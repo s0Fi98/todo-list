@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Nav from "../pages/nav";
 
+import Axios from "axios";
+
 import "../css/c.css";
 
 const C = () => {
@@ -17,7 +19,13 @@ const C = () => {
 
   const AddGoal = (event) => {
     event.preventDefault();
-    console.log("Todo Added..", addTodo);
+    Axios.post("http://localhost:3500/add-goal", addTodo)
+    .then((response)=>{
+      console.log(response.data);
+    })
+    .catch((error)=>{
+      console.log("error message: ", error);
+    })
   };
 
   return (
