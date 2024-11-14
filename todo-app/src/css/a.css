@@ -102,7 +102,7 @@
 }
 
 .forgot-password-link h5 {
-  font-size: 14px;
+  font-size: small;
   color: #ffad00;
   text-decoration: none;
   transition: color 0.3s;
@@ -113,15 +113,16 @@
 }
 
 .login-footer {
+  width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 
 .login-footer > span {
   display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 .login-footer > span :last-child h5 {

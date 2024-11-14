@@ -82,7 +82,7 @@ const A = () => {
             <input
               type={eye ? "text" : "password"}
               id="password"
-              placeholder="Password"
+              placeholder="Password here"
               value={inputData.password}
               onChange={(e) =>
                 setInputData({ ...inputData, [e.target.id]: e.target.value })
@@ -100,7 +100,7 @@ const A = () => {
           <h5>Forgot Password?</h5>
         </Link>
         <div className="login-footer">
-          <span>Don't have login data create one :</span>
+          <span>Don't have login data? create one:</span>
           <span>
             <Link to={'/create-Login-credentials'}><h5>Create</h5></Link>
           </span>
