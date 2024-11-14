@@ -50,14 +50,11 @@ const addGoal = async (req, res) => {
 
 const getTodos = async (req, res) => {
  try {
-   const {id, todoTittle, todoTextarea} = req.body;
-   console.log("Req=>", req.body);
-   
-   const findTodo = await modelData.newTodo.find({id, todoTittle, todoTextarea});
+   const findTodo = await modelData.newTodo.find();
    console.log(findTodo);
    
    if (findTodo) {
-    res.status(200).send({data: findTodo})
+    res.status(200).json({data: findTodo})
    } else {
     res.status(200).send({message: "Cant find Todos"})
    }

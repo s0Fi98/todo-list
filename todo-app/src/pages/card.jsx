@@ -13,8 +13,8 @@ const Card = () => {
    alert("Hiii")
    Axios.get("http://localhost:3500/get-Todos")
    .then((result) => {
-    console.log();
-    setTodoData(result.data)
+    console.log("result is: ", result);
+    setTodoData(result.data.data)
    }).catch((err) => {
     
    });
@@ -35,7 +35,7 @@ const Card = () => {
 
   return (
     <div className="main-container">
-        {todoData.map((val) => (
+        {todoData.length && todoData.map((val) => (
           <div className="main-card" key={val.id}>
             <div className="card-head">
               <span>
