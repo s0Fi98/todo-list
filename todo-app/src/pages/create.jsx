@@ -22,6 +22,7 @@ const C = () => {
     Axios.post("http://localhost:3500/add-goal", addTodo)
     .then((response)=>{
       console.log(response.data);
+      alert("Todo has been added..")
     })
     .catch((error)=>{
       console.log("error message: ", error);

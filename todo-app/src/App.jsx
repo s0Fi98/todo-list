@@ -5,6 +5,7 @@ import A from './pages/login';
 import B from './pages/home';
 import C from './pages/create';
 import Create from './pages/signup'
+import Card from "./pages/card";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/home-page" element={<B/>}/>
           <Route path="/create-todos" element={<C/>}/>
           <Route path="/create-Login-credentials" element={<Create/>}/>
+          <Route path="/card" element={<Card/>}/>
         </Routes>
       </BrowserRouter>
     </>

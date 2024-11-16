@@ -10,13 +10,12 @@ const Card = () => {
   }]);
 
  useEffect(() => {
-   alert("Hiii")
    Axios.get("http://localhost:3500/get-Todos")
    .then((result) => {
     console.log("result is: ", result);
     setTodoData(result.data.data)
    }).catch((err) => {
-    
+    console.log('Error msg ==> ', err);
    });
  }, [])
  
@@ -29,14 +28,13 @@ const Card = () => {
   const [checked, setChecked] = useState(false);
   const handleCheck = (e) => {
     setChecked(!checked)
-    alert('Goal Completed')
 
   }
 
   return (
     <div className="main-container">
         {todoData.length && todoData.map((val) => (
-          <div className="main-card" key={val.id}>
+          <div className="main-card">
             <div className="card-head">
               <span>
                 <input type="checkbox" onChange={handleCheck}/>
