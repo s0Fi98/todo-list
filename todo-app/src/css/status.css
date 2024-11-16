@@ -1,0 +1,64 @@
+.status-container {
+    display: flex;
+    justify-content: center;
+}
+
+.status-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: bisque;
+    width: 80vw;
+    height: 10vh;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.status-card:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+.status-card:hover .done-btn {
+    background-color: #f06;
+}
+
+.status-card:hover .total-btn {
+    background-color: #f06;
+}
+
+.status-done, .status-total {
+    display: flex;
+    flex-direction: row;
+}
+
+.done-btn, .total-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.done-btn:hover, .total-btn:hover {
+    transform: scale(1.05);
+}
+
+/* .done-img, .total-img {
+    
+} */
+
+.done-text, .total-text {
+    font-size: 13px;
+    font-family: monospace;
+    font-weight: 600;
+}

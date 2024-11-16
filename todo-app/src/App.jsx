@@ -6,6 +6,7 @@ import B from './pages/home';
 import C from './pages/create';
 import Create from './pages/signup'
 import Card from "./pages/card";
+import Status from "./pages/status";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/create-todos" element={<C/>}/>
           <Route path="/create-Login-credentials" element={<Create/>}/>
           <Route path="/card" element={<Card/>}/>
+          <Route path="/status" element={<Status/>}/>
         </Routes>
       </BrowserRouter>
     </>
